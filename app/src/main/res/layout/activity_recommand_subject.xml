@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?><!--8번-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SelfInfoActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#6f5ea5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="성신여대 학점계산기"
+                android:textColor="#FFFFFF"
+                android:textSize="9pt"></TextView>
+
+            <ImageButton
+                android:id="@+id/bnt_modify"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="#6f5ea5"
+                android:onClick="onClick"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/user"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6f5ea5"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/my_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="106/130"
+                android:textColor="#FFFFFF"
+                android:textSize="15pt"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6f5ea5"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="총 취득 학점"
+                android:textColor="#FFFFFF"
+                android:textSize="9pt"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <!--        <Button-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:layout_marginBottom="10dp"-->
+            <!--            android:drawableLeft="@drawable/grade"-->
+            <!--            android:textSize="22dp"-->
+            <!--            android:text="이수 현황"-->
+            <!--            android:layout_marginleft="1dp"-->
+            <!--            android:background="#6f5ea5"-->
+            <!--            android:textColor="#FFFFFF">-->
+            <!--        </Button>-->
+
+
+            <!--        <Button-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:gravity="center"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:drawableLeft="@drawable/notebook_1"-->
+            <!--            android:scaleType="fitCenter"-->
+            <!--            android:textSize="22dp"-->
+            <!--            android:text="수강한 과목"-->
+            <!--            android:layout_marginleft="1dp"-->
+            <!--            android:background="#6f5ea5"-->
+            <!--            android:textColor="#FFFFFF">-->
+            <!--        </Button>-->
+
+            <!--        <Button-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:drawableLeft="@drawable/lightbulb_2"-->
+            <!--            android:textSize="22dp"-->
+            <!--            android:text="과사무실"-->
+            <!--            android:background="#FFFFFF"-->
+            <!--            android:textColor="#6f5ea5">-->
+            <!--        </Button>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bnt1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#6f5ea5"
+                android:text="이수현황"
+                android:textColor="#FFFFFF"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/bnt2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#6f5ea5"
+                android:text="수강한과목"
+                android:textColor="#FFFFFF"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/bnt3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:text="수강할과목"
+                android:textColor="#6f5ea5"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/bnt4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#6f5ea5"
+                android:text="내정보"
+                android:textColor="#FFFFFF"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:background="#ffffff"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <LinearLayout
+                android:padding="10dip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/b_major"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="주전공" />
+
+                <CheckBox
+                    android:id="@+id/b_dmajor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="복수전공" />
+
+                <CheckBox
+                    android:id="@+id/b_minor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="부전공" />
+
+                <CheckBox
+                    android:id="@+id/b_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="재수강" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/priv_subject_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

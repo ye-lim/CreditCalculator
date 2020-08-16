@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?><!--3번-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SelfInfoActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#6f5ea5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="성신여대 학점계산기"
+                android:textColor="#FFFFFF"
+                android:textSize="9pt"></TextView>
+
+            <ImageButton
+                android:id="@+id/bnt_modify"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="#6f5ea5"
+                android:onClick="onClick"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/user" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6f5ea5"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/my_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="106/130"
+                android:textColor="#FFFFFF"
+                android:textSize="15pt"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6f5ea5"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="총 취득 학점"
+                android:textColor="#FFFFFF"
+                android:textSize="9pt"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bnt1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="onClick"
+                android:text="이수현황"
+                android:textColor="#6f5ea5" />
+
+            <Button
+                android:id="@+id/bnt2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#6f5ea5"
+                android:onClick="onClick"
+                android:text="수강한과목"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/bnt3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#6f5ea5"
+                android:onClick="onClick"
+                android:text="수강할과목"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/bnt4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#6f5ea5"
+                android:onClick="onClick"
+                android:text="내정보"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarDefaultDelayBeforeFade="500000"
+            android:scrollbarFadeDuration="0"
+            android:verticalScrollbarPosition="right">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:stretchColumns="0,1,2,3,4,5,6">
+
+                <TableRow
+                    android:background="#ffffff"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_margin="5dip"
+                        android:text="전공"
+                        android:textSize="18dip" />
+
+                    <TextView
+                        android:layout_margin="5dip"
+                        android:text="복전"
+                        android:textSize="18dip" />
+
+                    <TextView
+                        android:layout_margin="5dip"
+                        android:text="부전"
+                        android:textSize="18dip" />
+
+                    <TextView
+                        android:layout_margin="5dip"
+                        android:text="교직"
+                        android:textSize="18dip" />
+
+                    <TextView
+                        android:layout_margin="5dip"
+                        android:text="공교"
+                        android:textSize="18dip" />
+
+                    <TextView
+                        android:layout_margin="5dip"
+                        android:text="핵교"
+                        android:textSize="18dip" />
+
+                    <TextView
+                        android:layout_margin="5dip"
+                        android:text="일교"
+                        android:textSize="18dip" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/table_major"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/table_d_major"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/table_minor"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/table_t"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/table_c1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/table_c2"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/table_c3"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="23sp" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/darker_gray" />
+
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="텍스트 파일 불러오기"-->
+                <!--android:onClick="onClick"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:text="전공"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginBottom="30dip"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+                android:padding="15dip">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:text="주전공"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dip">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="30dip"
+                            android:text="핵심" />
+
+                        <ProgressBar
+                            android:id="@+id/p1"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_orange" />
+
+                        <TextView
+                            android:id="@+id/base_major_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="30dip"
+                            android:text="심화" />
+
+                        <ProgressBar
+                            android:id="@+id/p2"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_orange" />
+
+                        <TextView
+                            android:id="@+id/deepen_major_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:text="복수전공"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dip">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/t3"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="30dip"
+                            android:text="핵심" />
+
+                        <ProgressBar
+                            android:id="@+id/p3"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_pink" />
+
+                        <TextView
+                            android:id="@+id/d_base_major_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/t4"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="30dip"
+                            android:text="심화" />
+
+
+                        <ProgressBar
+                            android:id="@+id/p4"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_pink" />
+
+                        <TextView
+                            android:id="@+id/d_deepen_major_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/minor_teaching"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:text="부전공/교직"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dip">
+
+                    <LinearLayout
+                        android:id="@+id/minor_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/t5"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:text="부전공" />
+
+                        <ProgressBar
+                            android:id="@+id/p5"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_purple" />
+
+                        <TextView
+                            android:id="@+id/minor_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/teaching_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t6"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="30dip"
+                            android:text="교직" />
+
+                        <ProgressBar
+                            android:id="@+id/p6"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_purple" />
+
+                        <TextView
+                            android:id="@+id/teach_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:paddingBottom="10dip"
+                android:text="교양"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginBottom="30dip"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+                android:padding="15dip">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:text="공통교양/일반교양"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dip">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/t7"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="30dip"
+                            android:text="핵심" />
+
+                        <ProgressBar
+                            android:id="@+id/p7"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_purple" />
+
+                        <TextView
+                            android:id="@+id/culture_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/t8"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="30dip"
+                            android:text="심화" />
+
+                        <ProgressBar
+                            android:id="@+id/p8"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_purple" />
+
+                        <TextView
+                            android:id="@+id/culture_gen_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/tref"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:text="진로소양" />
+
+                        <ProgressBar
+                            android:id="@+id/pref"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progress_style_purple" />
+
+                        <TextView
+                            android:id="@+id/culture_ref_credit"
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0/0" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="핵심교양"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/n1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="#6f5ea5"
+                        android:padding="4dp"
+                        android:text=" 1 " />
+
+                    <TextView
+                        android:id="@+id/n2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/n1"
+                        android:background="#6f5ea5"
+                        android:padding="4dp"
+                        android:text=" 2 " />
+
+                    <TextView
+                        android:id="@+id/n3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/n2"
+                        android:background="#6f5ea5"
+                        android:padding="4dp"
+                        android:text=" 3 " />
+
+                    <TextView
+                        android:id="@+id/n4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/n3"
+                        android:background="#ffffff"
+                        android:padding="4dp"
+                        android:text=" 4 " />
+
+                    <TextView
+                        android:id="@+id/t9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/n3"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/n4"
+                        android:text="0/0" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
